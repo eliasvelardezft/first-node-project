@@ -3,7 +3,7 @@ const {readFile, readFileSync} = require('fs').promises;
 
 const app = express();
 
-app.get('/hola', async (request, response) => {
+app.get('/', async (request, response) => {
 
   response.send(await readFile('./index.html', 'utf8'));
 
